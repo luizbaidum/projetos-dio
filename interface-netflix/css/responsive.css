@@ -1,0 +1,56 @@
+@media screen and (max-width: 850px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header .logo {
+        margin-left: 0px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .button {
+        margin-top: 5px;
+    }
+
+    .album-principal {
+        height: 400px;
+    }
+
+    #titulo {
+        font-size: 27px;
+    }    
+
+    body {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .album-principal {
+        height: 300px;
+    }
+
+    header .logo {
+        margin-left: 0px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    #titulo {
+        font-size: 22px;
+    }  
+
+    body {
+        margin: 5px 0;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+}
