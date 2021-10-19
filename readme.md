@@ -4,4 +4,4 @@
 
 ## (2) Projetos desenvolvidos durante cursos estudados na plataforma Udemy.
 - Udemy: Game Mata Mosquito (Desenvolvimento Web Completo 2021);
-- - Udemy: Exercício: Herança e Arrays (Desenvolvimento Web Completo 2021);
+- Udemy: Exercício: Herança e Arrays (Desenvolvimento Web Completo 2021);
