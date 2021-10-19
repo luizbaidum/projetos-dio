@@ -1,0 +1,217 @@
+<!doctype html>
+	<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<title>Pilar Herança (exercício)</title>
+
+	<style type="text/css">
+		.container {
+			width: 80%;
+			border: 2px solid darkblue;
+			margin: 10px auto;
+			padding: 10px;
+		}
+
+		.container div {
+			margin: 10px;
+		}
+
+		#cor, #tamanho, #orelhas, #bico, #falar {
+			width: 12%;
+			min-width: 60px;
+			margin: 5px 5px 5px 0px;
+		}
+
+		#pesquisa-lista input, #pesquisa-lista label {
+			margin: 5px 0px;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<form>
+
+			<div>
+				<label for="animais">Escolha o animal:</label>
+
+		        <select name="animais" id="seletor">
+		          <option value="none" selected="selected">Selecione</option>
+				  <option value="cachorro">Cachorro</option>
+				  <option value="passaro">Pássaro</option>
+				  <option value="papagaio">Papagaio</option>
+				</select>
+		    </div>
+
+		    <div>
+		        <label for="cor">Cor:</label>
+		        <input type="text" id="cor">
+		        <label for="tamanho">Tamanho:</label>
+		        <input type="text" id="tamanho">
+		        <label for="orelhas">Orelhas:</label>
+		        <input type="text" id="orelhas">
+		        <label for="bico">Bico:</label>
+		        <input type="text" id="bico">
+		        <label for="sabe-falar">Sabe falar:</label>
+		        <input type="text" id="falar">
+		    </div>
+
+		    <div>
+
+		        <input type="button" name="" value="Gravar na lista" style="width: 100%;" onclick="gravar()">
+
+		    </div>
+		    <div>
+
+		        <input type="button" value="Limpar campos" style="width: 100%;" onclick="limpar()">
+
+		    </div>
+	
+			<div style="width: 50%;" id="pesquisa-lista">
+				<span>Selecione a opção de lista</span><br>
+				<input type="radio" name="opt-lista" id="opt-lista-todas" value="todas">
+				<label for="todas"></label>Todas</label><br>
+				<input type="radio" name="opt-lista" id="opt-lista-cachorros" value="cachorros">
+				<label for="cachorros">Cachorros</label><br>
+				<input type="radio" name="opt-lista" id="opt-lista-passaros" value="passaros">
+				<label for="passaros">Pássaros</label><br>
+				<input type="radio" name="opt-lista" id="opt-lista-papagaios" value="papagaios">
+				<label for="passaros">Papagaios</label><br>
+				<input type="button" name="" value="Exibir lista" style="width: 50%;" onclick="exibirLista()">
+				<input type="button" name="" value="Limpar lista" style="width: 50%;" onclick="limparLista()">
+			</div>
+		</form>
+	</div>
+
+<!-- ========================================== -->
+
+	<script type="text/javascript">
+		/** CÓDIGOS DE SISTEMA **/
+
+		/*****definição das arrays (listas)*/
+		let arrayAnimais = [];
+		let arrayCachorro = [];
+		let arrayPassaro = [];
+		let arrayPapagaio = [];
+
+		/*****definição dos objetos*/
+		class Animal {
+			constructor(cor, tamanho){
+				this.cor = document.getElementById('cor').value;
+				this.tamanho = document.getElementById('tamanho').value;
+			}
+		}
+		
+		class Cachorro extends Animal{
+			constructor(orelhas, cor, tamanho) {
+				super(cor, tamanho);
+				this.objeto = 'Cachorro';
+				this.orelhas = document.getElementById('orelhas').value;
+			}
+		}
+
+		class Passaro extends Animal{
+			constructor(bico, cor, tamanho) {
+				super(cor, tamanho);
+				this.objeto = 'Pássaro';
+				this.bico = document.getElementById('bico').value;
+			}
+		}
+
+		class Papagaio extends Passaro {
+			constructor(sabeFalar, bico, cor, tamanho) {
+				super(bico, cor, tamanho);
+				this.objeto = 'Papagaio';
+				this.sabeFalar = document.getElementById('falar').value;
+			}
+		}
+
+		/*****funções interativas*/
+		function gravar() {
+
+			let seletor = document.getElementById("seletor");
+			console.log(seletor.value);
+
+			if(seletor.value === 'cachorro') {
+
+				let cachorro = new Cachorro();
+				arrayCachorro.push(cachorro);
+
+			} else if (seletor.value === 'passaro') {
+
+				let passaro = new Passaro();
+				arrayPassaro.push(passaro);
+				
+			} else if(seletor.value === 'papagaio') {
+
+				let papagaio = new Papagaio();
+				arrayPapagaio.push(papagaio);
+				
+			} else {}
+		}
+
+		function limpar() {
+			this.cor = document.getElementById('cor').value = "";
+			this.tamanho = document.getElementById('tamanho').value = "";
+			this.orelhas = document.getElementById('orelhas').value = "";
+			this.bico = document.getElementById('bico').value = "";
+			this.sabeFalar = document.getElementById('falar').value = "";
+			seletor.value = "none";
+		}
+
+		let optLista = document.getElementsByName('opt-lista');
+
+		arrayAnimais.push(arrayCachorro, arrayPassaro, arrayPapagaio); //criação da lista animais (inclui todos as listas)	
+
+		function exibirLista() {
+
+			if (optLista[0].checked) {
+				
+				console.log(arrayAnimais);
+
+				} else if (optLista[1].checked) {
+					console.log(arrayCachorro);
+
+				} else if (optLista[2].checked) {
+					console.log(arrayPassaro);
+
+				} else if (optLista[3].checked)	  {
+					console.log(arrayPapagaio);
+
+				} else {
+				console.log('Selecione uma opção');
+			}
+		}
+
+	function limparLista() {
+
+		if (optLista[0].checked) {
+				arrayAnimais.length = 0;
+				arrayCachorro.length = 0;
+				arrayPassaro.length = 0;
+				arrayPapagaio.length = 0;
+
+				} else if (optLista[1].checked) {
+					arrayCachorro.length = 0;
+
+				} else if (optLista[2].checked) {
+					arrayPassaro.length = 0;
+
+				} else if (optLista[3].checked)	  {
+					arrayPapagaio.length = 0;
+
+				} else {
+				console.log('Selecione uma opção');
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>
