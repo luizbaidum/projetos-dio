@@ -7,5 +7,7 @@ O app (.html) é dividido em duas páginas (uma para lançamento das despesas e 
 Pretendo aplicar melhorias com o tempo.
 
 ATUALIZAÇÕES 07/01/2022:
-> Possibilidade de lançar receitas e despesas (uma pagina .html para cada). Agora o projeto possui 3 páginas .html;
-> Valor na lista exibida em consulta.html formatado para exibição com R$
+
+Possibilidade de lançar receitas e despesas (uma pagina .html para cada). Agora o projeto possui 3 páginas .html;
+
+Valor na lista exibida em consulta.html formatado para exibição com R$;
