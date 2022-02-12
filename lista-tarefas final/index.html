@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Lista de Tarefas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Luiz Baidum">
+	
+	<link rel="stylesheet" type="text/css" href="style/estilo.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h3>Lista de tarefas</h3>
+
+        <div>
+            <label>Incluir tarefa:</label>
+            <input type="text"><button id="addbutton" onclick="novaLinha()">+ tarefa</button>
+
+            <ul id="listaItens">
+                
+            </ul>
+
+        </div>
+    </main>
+</body>
+
+    <script src="js/logica.js"></script>
+</html>
