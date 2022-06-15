@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 400px;
+}
+
+.continue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    min-height: 43rem;
+}
+
+.fone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.fone img {
+    height: 40rem;
+}
+
+.foto img {
+    width: 170px;
+}
+
+.caixas {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.grupo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2px 0;
+    padding: 5px 0;
+}
+
+.apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.baixe-app {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 2px 0;
+}
+
+.baixe-app img {
+    width: 150px;
+}
+
+span {
+    font-style: italic;
+}
