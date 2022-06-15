@@ -3,6 +3,7 @@
 - DIO: Projeto copia do Netflix (The Beatles discography) (MRV Front End SPA Developer);
 - DIO: Lista de afazeres (Take Blip Web Developer);
 - DIO: Construindo o seu primeiro jogo de naves;
+- DIO: Copia da página de login do Instagram (Santander Bootcamp Fullstack Developer);
 
 ## (2) Projetos desenvolvidos durante cursos estudados na plataforma Udemy.
 - Udemy: Game Mata Mosquito (Desenvolvimento Web Completo 2021);
